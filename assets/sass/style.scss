@@ -5,15 +5,17 @@
 }
 
 body{
-    font-family: 'Lato' , sans-serif;
+    font-family: "Lato" , sans-serif;
+    
     
 }
-
 section{
     text-align: center;
-    
-  
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+
 }
 .button{
     height: 50px;
