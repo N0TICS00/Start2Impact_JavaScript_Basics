@@ -25,7 +25,7 @@ buttonGroup.appendChild(increaseButton)
 counterSection.prepend(counterText)
 
 
-let bestScore = counter
+let bestScore = 0
 
 // Counter Script
 
@@ -35,7 +35,13 @@ let bestScore = counter
 increaseButton.addEventListener("click" , function(){
     counter++
     counterText.innerHTML = counter
- 
+ if(bestScore < counter){
+    bestScore = counter 
+    localStorage.getItem("bestScore")
+    let bestScoreStorage = localStorage.setItem("bestScore" , bestScore)
+    bestScoreText.innerText = `Best Score: ${localStorage.getItem("bestScore")}`
+     
+ }
     if(counter % 50 === 0){
         motivationText.innerText="You can do it!"
     }
