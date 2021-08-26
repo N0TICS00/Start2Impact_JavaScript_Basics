@@ -10,6 +10,7 @@ let counter = 0
 let section = document.querySelector("section")
 let counterSection = document.querySelector(".counter-text")
 let motivationText = document.querySelector(".motivation-text")
+let bestScoreText = document.querySelector(".best-score")
 increaseButton.innerHTML = "+"
 decreaseButton.innerHTML = "-"
 resetButton.innerHTML = "Reset"
@@ -24,7 +25,7 @@ buttonGroup.appendChild(increaseButton)
 counterSection.prepend(counterText)
 
 
-
+let bestScore = counter
 
 // Counter Script
 
@@ -34,11 +35,12 @@ counterSection.prepend(counterText)
 increaseButton.addEventListener("click" , function(){
     counter++
     counterText.innerHTML = counter
+ 
     if(counter % 50 === 0){
         motivationText.innerText="You can do it!"
     }
     if(counter % 100 === 0){
-        motivationText.innerText="Keep Going"
+        motivationText.innerText="Keep Going!"
     }
     this.classList.toggle("button-animation")
 })
