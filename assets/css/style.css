@@ -6,20 +6,43 @@
 
 body {
   font-family: "Lato", sans-serif;
+  background-image: linear-gradient(to right, #4facfe, #00f2fe);
 }
 
 section {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: absolute;
+  margin: 80% auto;
 }
 
+@keyframes buttonAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .button {
   height: 50px;
   width: 100px;
-  background-color: red;
+  border: none;
+  margin: 20px 5px;
+  border-radius: 0.25rem;
+  background-image: linear-gradient(to left, #4facfe, #00f2fe);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.button-animation {
+  animation: buttonAnimation 0.3s ease;
+}
+
+@media only screen and (min-width: 961px) {
+  section {
+    margin: 22% auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
