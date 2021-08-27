@@ -40,7 +40,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Counter++ Website][assets/img/websiteScreenShot](https://counterplus.netlify.app/)
+![websiteScreenshot](https://counterplus.netlify.app/)
 
 This site is a minimalist counter with 3 main button: '-' , 'Reset' and '+', they are quite self-explanatory.
 
