@@ -46,7 +46,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[[Product Name Screen Shot][websiteScreenShot.png]](https://counterplus.netlify.app/)
+![Counter++ Website][assets/img/websiteScreenShot.png](https://counterplus.netlify.app/)
 
 This site is a minimalist counter with 3 main button: '-' , '+' and 'Reset', they are quite self-explanatory.
 
