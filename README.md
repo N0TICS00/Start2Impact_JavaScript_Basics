@@ -1,10 +1,4 @@
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-]
-
 
 
 
@@ -48,12 +42,12 @@
 
 ![Counter++ Website][assets/img/websiteScreenShot](https://counterplus.netlify.app/)
 
-This site is a minimalist counter with 3 main button: '-' , '+' and 'Reset', they are quite self-explanatory.
+This site is a minimalist counter with 3 main button: '-' , 'Reset' and '+', they are quite self-explanatory.
 
 ### Built With
 
 
-* [HTML]
+* HTML
 * [Vanilla JavaScript](https://www.javascript.com/)
 * [SASS](https://sass-lang.com/guide)
 
