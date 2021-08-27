@@ -35,7 +35,7 @@ a {
 
 #footer {
   text-align: center;
-  margin-top: -15%;
+  margin-top: -55%;
 }
 
 @keyframes buttonAnimation {
@@ -53,10 +53,18 @@ a {
   section {
     margin: 22% auto;
   }
+
+  #footer {
+    margin: -15% auto;
+  }
 }
 @media only screen and (min-height: 568px) and (max-height: 667px) {
   section {
     margin: 40% auto;
+  }
+
+  #footer {
+    margin: -20% auto;
   }
 }
 
