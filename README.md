@@ -47,7 +47,7 @@ This site is a minimalist counter with 3 main button: '-' , 'Reset' and '+', the
 ### Built With
 
 
-* [HTML]
+* HTML
 * [Vanilla JavaScript](https://www.javascript.com/)
 * [SASS](https://sass-lang.com/guide)
 
