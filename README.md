@@ -1,10 +1,4 @@
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-]
-
 
 
 
@@ -46,7 +40,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[[Product Name Screen Shot][websiteScreenShot.png]](https://counterplus.netlify.app/)
+![websiteScreenshot](https://user-images.githubusercontent.com/76558194/131164773-68962c08-fde0-4e53-8c44-5d3e7cd0bd63.png)
 
 This site is a minimalist counter with 3 main button: '-' , '+' and 'Reset', they are quite self-explanatory.
 
