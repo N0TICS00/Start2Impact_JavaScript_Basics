@@ -15,20 +15,21 @@ let bestScoreText = document.querySelector(".best-score")
 
 //Best Score && Counter Value
 let bestScoreData = localStorage.getItem("bestScore") 
-let bestScore = 0
 let counter = 0
+
 
 //Create Element
 let increaseButton = document.createElement("button")
 let decreaseButton = document.createElement("button")
 let resetButton = document.createElement("button")
 //Add text
-  
+  if(bestScoreData === null) bestScoreText.innerHTML = `User's Best Score: 0`
+else  bestScoreText.innerText = `User's Best Score: ${bestScoreData}`
   increaseButton.innerHTML = "+"
   decreaseButton.innerHTML = "-"
   resetButton.innerHTML = "Reset"
   counterText.innerHTML = `User's Score: ${counter}`
-  bestScoreText.innerText = `User's Best Score: ${bestScoreData}`
+  
 // Add Classes
   increaseButton.classList.add("button")
   decreaseButton.classList.add("button")
