@@ -9,12 +9,11 @@ let buttonGroup = document.querySelector(".button-group")
 let counter = 0
 let section = document.querySelector("section")
 let counterSection = document.querySelector(".counter-text")
-let motivationText = document.querySelector(".motivation-text")
 let bestScoreText = document.querySelector(".best-score")
 increaseButton.innerHTML = "+"
 decreaseButton.innerHTML = "-"
 resetButton.innerHTML = "Reset"
-counterText.innerHTML = String(counter)
+counterText.innerHTML = `User's Score: ${counter}`
 
 increaseButton.classList.add("button")
 decreaseButton.classList.add("button")
@@ -25,42 +24,37 @@ buttonGroup.appendChild(increaseButton)
 counterSection.prepend(counterText)
 
 
-let bestScore = 0
+let bestScore = localStorage.getItem("bestScore")
 
 // Counter Script
 
-
+bestScoreText.innerText = `User's Best Score: ${localStorage.getItem("bestScore")}`
 
 // Increase the counter and display it
 increaseButton.addEventListener("click" , function(){
     counter++
-    counterText.innerHTML = counter
+    counterText.innerHTML = `User's Score: ${counter}`
+    
  if(bestScore < counter){
-    bestScore = counter 
-    localStorage.getItem("bestScore")
-    let bestScoreStorage = localStorage.setItem("bestScore" , bestScore)
-    bestScoreText.innerText = `Best Score: ${localStorage.getItem("bestScore")}`
+    localStorage.setItem("bestScore" , counter)
+    
+    bestScoreText.innerText = `User's Best Score: ${localStorage.getItem("bestScore")}`
      
  }
-    if(counter % 50 === 0){
-        motivationText.innerText="You can do it!"
-    }
-    if(counter % 100 === 0){
-        motivationText.innerText="Keep Going!"
-    }
+ 
     this.classList.toggle("button-animation")
 })
 // Reset the counter 
 resetButton.addEventListener("click" , function(){
     counter = 0
-    counterText.innerHTML = counter
+    counterText.innerHTML = `User's Score: ${counter}`
     this.classList.toggle("button-animation")
 })
 
 // Decrease the counter and display it
 decreaseButton.addEventListener("click" , function(){
     counter--
-    counterText.innerHTML = counter
+    counterText.innerHTML = `User's Score: ${counter}`
     this.classList.toggle("button-animation")
 })
 
