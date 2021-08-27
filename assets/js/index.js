@@ -1,50 +1,61 @@
 'use strict';
 
-// Initialization
+
+//Query Selector
+let counterText = document.querySelector(".counter-text")
+let buttonGroup = document.querySelector(".button-group")
+let section = document.querySelector("section")
+let bestScoreText = document.querySelector(".best-score")
+
+
+
+
+
+
+
+//Best Score && Counter Value
+let bestScoreData = localStorage.getItem("bestScore") 
+let bestScore = 0
+let counter = 0
+
+//Create Element
 let increaseButton = document.createElement("button")
 let decreaseButton = document.createElement("button")
 let resetButton = document.createElement("button")
-let counterText = document.createElement("h1")
-let buttonGroup = document.querySelector(".button-group")
-let counter = 0
-let section = document.querySelector("section")
-let counterSection = document.querySelector(".counter-text")
-let bestScoreText = document.querySelector(".best-score")
-increaseButton.innerHTML = "+"
-decreaseButton.innerHTML = "-"
-resetButton.innerHTML = "Reset"
-counterText.innerHTML = `User's Score: ${counter}`
+//Add text
+  
+  increaseButton.innerHTML = "+"
+  decreaseButton.innerHTML = "-"
+  resetButton.innerHTML = "Reset"
+  counterText.innerHTML = `User's Score: ${counter}`
+  bestScoreText.innerText = `User's Best Score: ${bestScoreData}`
+// Add Classes
+  increaseButton.classList.add("button")
+  decreaseButton.classList.add("button")
+  resetButton.classList.add("button")
 
-increaseButton.classList.add("button")
-decreaseButton.classList.add("button")
-resetButton.classList.add("button")
-buttonGroup.appendChild(decreaseButton)
-buttonGroup.appendChild(resetButton)
-buttonGroup.appendChild(increaseButton)
-counterSection.prepend(counterText)
+//Display
+  buttonGroup.appendChild(decreaseButton)
+  buttonGroup.appendChild(resetButton)
+  buttonGroup.appendChild(increaseButton)
 
 
-let bestScore = localStorage.getItem("bestScore")
 
-// Counter Script
 
-bestScoreText.innerText = `User's Best Score: ${localStorage.getItem("bestScore")}`
-
+ // Counter Script 
 // Increase the counter and display it
 increaseButton.addEventListener("click" , function(){
     counter++
     counterText.innerHTML = `User's Score: ${counter}`
-    
- if(bestScore < counter){
+    // Set BestScore Data in localStorage and display it 
+    if(bestScoreData < counter){
     localStorage.setItem("bestScore" , counter)
-    
     bestScoreText.innerText = `User's Best Score: ${localStorage.getItem("bestScore")}`
-     
- }
+    }
  
     this.classList.toggle("button-animation")
 })
-// Reset the counter 
+// Reset the counter and display it
 resetButton.addEventListener("click" , function(){
     counter = 0
     counterText.innerHTML = `User's Score: ${counter}`
@@ -58,5 +69,5 @@ decreaseButton.addEventListener("click" , function(){
     this.classList.toggle("button-animation")
 })
 
-//Onclick start the animation
+
 

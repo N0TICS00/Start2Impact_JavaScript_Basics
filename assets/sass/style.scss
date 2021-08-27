@@ -1,26 +1,49 @@
+// Import Variables File
 @use 'variabili';
 
-
+// Universal Selector
 *{
     padding:0;
     margin:0;
     box-sizing: border-box;
 }
 
+// Tag Selector
 body{
     font-family: "Lato" , sans-serif;
     background-image: variabili.$background-color;
-    
+
 }
 section{
     text-align: center;
     margin:80% auto;
-
-
 }
+a{
+    text-decoration: none;
+    color:rgb(225,225,225)
+}
+// Class Selector
+.button{
+    height: 50px;
+    width: 100px;
+    border:none;
+    margin: 20px 5px;
+    border-radius: .25rem;
+    background-image:variabili.$background-color-inverse;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1)
+}
+
+.button-animation{
+    animation: buttonAnimation .3s ease ;
+}
+// ID Selector
+#footer{
+    text-align: center;
+    margin-top: -15%
+}
+// Button Animation
 @keyframes buttonAnimation {
     0%{
-        
         transform: translateY(0)   ;
     }
     50%{
@@ -31,23 +54,14 @@ section{
     }
 }
 
-.button{
-    height: 50px;
-    width: 100px;
-    border:none;
-    margin: 20px 5px;
-    border-radius: .25rem;
-    background-image:variabili.$background-color-inverse;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1)
-
-}
-
-.button-animation{
-    animation: buttonAnimation .3s ease ;
-}
-
+// Media Query
 @media only screen and (min-width:961px){
         section{
             margin: 22% auto
         }
+}
+@media only screen and (min-height:568px) and (max-height:667px){
+    section{
+        margin: 40% auto
     }
+}
