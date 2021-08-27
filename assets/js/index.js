@@ -47,6 +47,7 @@ let resetButton = document.createElement("button")
 increaseButton.addEventListener("click" , function(){
     counter++
     counterText.innerHTML = `User's Score: ${counter}`
+ 
     // Set BestScore Data in localStorage and display it 
     if(bestScoreData < counter){
     localStorage.setItem("bestScore" , counter)
